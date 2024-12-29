@@ -11,17 +11,17 @@ export function KanbanColumn({ statusId, title, tasks }) {
   }
 
   return (
-    <section className="kanban_column">
+    <section
+      className="kanban_column"
+      onDragEnter={dragEnter}
+      onDragLeave={dragLeave}
+    >
       <header className="kanban_column_header">
         <div className="kanban_column_title_letter">{title[0]}</div>
         <h3 className="kanban_column_title">{title}</h3>
       </header>
 
-      <div
-        className="cards_container"
-        onDragEnter={dragEnter}
-        onDragLeave={dragLeave}
-      >
+      <div className="cards_container">
         {tasks.map((task) => {
           return <KanbanCard key={task.id} task={task} />;
         })}

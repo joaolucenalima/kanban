@@ -2,15 +2,15 @@ import { CircleUserRound, Flag } from "lucide-react";
 
 export function KanbanCard({ task }) {
   const priorityColors = {
-    Baixa: {
+    Low: {
       color: "#1e90ff",
       fill: "#007acc",
     },
-    Média: {
+    Medium: {
       color: "#f1c40f",
       fill: "#d4af37",
     },
-    Alta: {
+    High: {
       color: "#e74c3c",
       fill: "#c0392b",
     },
@@ -22,16 +22,38 @@ export function KanbanCard({ task }) {
 
       <div className="card_info">
         <CircleUserRound size={18} />
-        <span>João Vitor</span>
+        {task.developer && (
+          <div className="card_developers">
+            {task.developer.split("%").map((dev, index) => {
+              const dev_name_initials = dev
+                .split(" ")
+                .slice(0, 2)
+                .map((name) => name[0])
+                .join("");
+              return (
+                <div
+                  key={dev}
+                  className="dev_initial_circle"
+                  title={dev}
+                  style={{ zIndex: 20 - index }}
+                >
+                  <span>{dev_name_initials}</span>
+                </div>
+              );
+            })}
+          </div>
+        )}
+
+        {!task.developer && <span>-</span>}
       </div>
 
       <div className="card_info">
         <Flag
           size={16}
-          fill={priorityColors["Alta"].fill}
-          color={priorityColors["Alta"].color}
+          fill={priorityColors[task.priority].fill || ""}
+          color={priorityColors[task.priority].color || ""}
         />
-        <span>Alta</span>
+        <span>{task.priority || "-"}</span>
       </div>
 
       <div className="card_status">

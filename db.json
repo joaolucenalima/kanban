@@ -5,69 +5,54 @@
       "title": "Implementar página de login",
       "description": "Desenvolver a interface e a lógica de autenticação para a página de login.",
       "status": "To Do",
-      "developer": 1
+      "developer": "Developer 1%Developer 2",
+      "priority": "High"
     },
     {
       "id": 2,
       "title": "Criar API de usuários",
       "description": "Desenvolver a API para gerenciamento de usuários, incluindo endpoints para criação, leitura, atualização e exclusão.",
-      "status": "Backlog"
+      "status": "Backlog",
+      "priority": "Medium"
     },
     {
       "id": 3,
       "title": "Configurar banco de dados",
       "description": "Configurar o banco de dados PostgreSQL para o projeto, incluindo a criação de tabelas e índices.",
-      "status": "Planning"
+      "status": "Planning",
+      "priority": "Low"
     },
     {
       "id": 4,
       "title": "Desenvolver página de cadastro",
       "description": "Criar a interface e a lógica de backend para a página de cadastro de novos usuários.",
       "status": "In Progress",
-      "developer": 2
+      "developer": "Developer 2",
+      "priority": "High"
     },
     {
       "id": 5,
       "title": "Implementar autenticação JWT",
       "description": "Adicionar autenticação baseada em JWT para proteger as rotas da API.",
-      "status": "Review",
-      "developer": 3
+      "status": "Backlog",
+      "developer": "Developer 3",
+      "priority": "High"
     },
     {
       "id": 6,
       "title": "Criar página de perfil do usuário",
       "description": "Desenvolver a interface e a lógica para a página de perfil do usuário, permitindo a visualização e edição de informações pessoais.",
-      "status": "In Review",
-      "developer": 4
+      "status": "Review",
+      "developer": "Developer 4",
+      "priority": "Medium"
     },
     {
       "id": 7,
       "title": "Implementar sistema de notificações",
       "description": "Desenvolver um sistema de notificações em tempo real para alertar os usuários sobre eventos importantes.",
       "status": "Done",
-      "developer": 5
-    }
-  ],
-  "developers": [
-    {
-      "id": 1,
-      "name": "Developer 1"
-    },
-    {
-      "id": 2,
-      "name": "Developer 2"
-    },
-    {
-      "id": 3,
-      "name": "Developer 3"
-    },
-    {
-      "id": 4,
-      "name": "Developer 4"
-    },
-    {
-      "id": 5,
-      "name": "Developer 5"
+      "developer": "Developer 5",
+      "priority": "Low"
     }
   ],
   "status": [
@@ -93,10 +78,6 @@
     },
     {
       "id": 6,
-      "name": "In Review"
-    },
-    {
-      "id": 7,
       "name": "Done"
     }
   ]
