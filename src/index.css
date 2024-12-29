@@ -44,7 +44,8 @@
 
 .kanban_column {
   min-width: 280px;
-  min-height: 100%;
+  height: 100%;
+  overflow-y: auto;
   border-radius: 8px;
 }
 

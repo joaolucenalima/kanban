@@ -50,8 +50,8 @@ export function KanbanCard({ task }) {
       <div className="card_info">
         <Flag
           size={16}
-          fill={priorityColors[task.priority].fill || ""}
-          color={priorityColors[task.priority].color || ""}
+          fill={priorityColors[task.priority]?.fill || "transparent"}
+          color={priorityColors[task.priority]?.color || "white"}
         />
         <span>{task.priority || "-"}</span>
       </div>
