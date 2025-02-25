@@ -1,13 +1,14 @@
-import { KanbanCard } from "./kanban-card";
+import { KanbanCard } from "./kanban-card"
 
 export function KanbanColumn({ statusId, title, tasks }) {
   function dragEnter(event) {
-    event.preventDefault();
-    event.target.classList.add("drag_zone_active");
+    event.preventDefault()
+    event.currentTarget.classList.add("drag_zone_active");
   }
 
   function dragLeave(event) {
-    event.target.classList.remove("drag_zone_active");
+    event.preventDefault()
+    event.currentTarget.classList.remove("drag_zone_active");
   }
 
   return (
@@ -15,6 +16,8 @@ export function KanbanColumn({ statusId, title, tasks }) {
       className="kanban_column"
       onDragEnter={dragEnter}
       onDragLeave={dragLeave}
+      onDragOver={dragEnter}
+      onDrop={dragLeave}
     >
       <header className="kanban_column_header">
         <div className="kanban_column_title_letter">{title[0]}</div>
