@@ -19,13 +19,19 @@ function App() {
         }, {});
 
         setTasksByStatus(tasksByStatus);
+      })
+      .catch(err => {
+        alert("Não foi possível carregar os dados do servidor")
       });
 
     fetch("http://localhost:3333/status")
       .then((response) => response.json())
       .then((data) => {
         setStatuses(data);
-      });
+      })
+      .catch(err => {
+        alert("Não foi possível carregar os dados do servidor")
+      });;
   }, []);
 
   return (
