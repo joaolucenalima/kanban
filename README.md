@@ -9,7 +9,7 @@ This is a Kanban board application built with React and Vite. It allows users to
    ```sh
    git clone github.com/joaolucenalima/kanban
    cd kanban
-  ```
+   ```
 2. Install dependencies:
    ```sh
    npm install
