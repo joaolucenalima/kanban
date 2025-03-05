@@ -1,23 +1,28 @@
 import { CircleUserRound, Flag } from "lucide-react";
 
-export function KanbanCard({ task }) {
-  const priorityColors = {
-    Low: {
-      color: "#1e90ff",
-      fill: "#007acc",
-    },
-    Medium: {
-      color: "#f1c40f",
-      fill: "#d4af37",
-    },
-    High: {
-      color: "#e74c3c",
-      fill: "#c0392b",
-    },
-  };
+const priorityColors = {
+  Low: {
+    color: "#1e90ff",
+    fill: "#007acc",
+  },
+  Medium: {
+    color: "#f1c40f",
+    fill: "#d4af37",
+  },
+  High: {
+    color: "#e74c3c",
+    fill: "#c0392b",
+  },
+};
 
+export function KanbanCard({ task }) {
   return (
-    <div className="kanban_card" draggable="true">
+    <div
+      className="kanban_card"
+      draggable="true"
+      onDrag={(e) => e.target.classList.add("in_drag")}
+      onDragEnd={(e) => e.target.classList.remove("in_drag")}
+    >
       <p className="card_title">{task.title}</p>
 
       <div className="card_info">
